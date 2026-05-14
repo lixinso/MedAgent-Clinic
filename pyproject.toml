@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medagent-clinic"
+version = "0.0.1"
+description = "Open-source AI agent toolkit for outpatient clinics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["medical", "clinical", "ai", "agent", "llm", "ehr", "soap"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "pydantic>=2.0",
+    "openai>=1.0",
+    "anthropic>=0.20",
+    "streamlit>=1.30",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/lixinso/MedAgent-Clinic"
+Repository = "https://github.com/lixinso/MedAgent-Clinic"
+Issues = "https://github.com/lixinso/MedAgent-Clinic/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["medagent_clinic*"]
